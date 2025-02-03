@@ -1,0 +1,141 @@
+/* Responsive Full Background Image Using CSS
+*/
+body {
+  /* Location of the image */
+  background-image: url(./images/bi-large.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color: #464646;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(./images/bi-small.jpg);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-buttons .btn {
+    margin-bottom: 10px;
+  }
+}
+
+/* video as background*/
+video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*main header*/
+h1 {
+  color: white;
+
+  background-color: black; /* Light gray */
+  border-radius: 10px; /* Adjust the radius value */
+  font-weight: bold;
+  text-align: center;
+  padding: 10px; /* Optional: Add padding for better visual appearance */
+}
+
+h4 {
+  color: skyblue;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+  padding: 5px 10px;
+}
+
+.h4_align {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+/* Make h1 and h4 fixed */
+.element {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* cards */
+.card {
+  background: whitesmoke;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+
+.card:active {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Social media links */
+.social-buttons .btn {
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.social-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons .btn i {
+  font-size: 1.2em;
+}
+
+/* getting footer under control */
+#page-container {
+  position: relative;
+}
+
+#content-wrap {
+  padding-bottom: 0.5rem; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5rem; /* Footer height */
+}
