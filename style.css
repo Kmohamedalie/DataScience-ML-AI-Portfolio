@@ -23,7 +23,9 @@ body {
   /* SHORTHAND CSS NOTATION
    * background: url(background-photo.jpg) center center cover no-repeat fixed;
    */
+  margin: 0;
 }
+
 
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
